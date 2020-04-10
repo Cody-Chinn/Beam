@@ -8,8 +8,9 @@
 .post-pic {
     margin: 2px;
     margin-right: 10px;
-    width: 30px;
-    height: 30px;
+    width: 42px;
+    height: 34px;
+    border-radius: 20px;
 }
 
 .post-hdr {

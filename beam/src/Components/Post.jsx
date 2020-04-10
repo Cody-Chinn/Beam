@@ -9,7 +9,7 @@ export default function Post () {
             <Card.Body>
                 <Card.Title>
                 <img 
-                    src="../logo192.png" 
+                    src="../default_profile.png" 
                     className="post-pic" 
                     alt="profile"  />
                     Cory Chinn

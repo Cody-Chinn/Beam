@@ -1,7 +1,7 @@
 import React from 'react';
-import "../Post.css";
+import "../Styling Sheets/Post.css";
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+import Tag from './Tag';
 
 export default function Post () {
 
@@ -16,7 +16,7 @@ export default function Post () {
                         alt="profile"  />
                         Cory Chinn
                     <div className="post-tag">
-                        <Button variant="secondary">Engineer</Button>{' '}
+                        <Tag />
                     </div>
                     </Card.Title>
                     <Card.Text>

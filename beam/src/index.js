@@ -1,12 +1,26 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Main from './Components/Main';
+import './Styling Sheets/index.css';
+import Home from './Components/Home';
+import NavMenu from './Components/NavMenu';
+import Profile from './Components/Profile';
+import AddPost from './Components/AddPost'
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import {
+  Route,
+  HashRouter
+} from "react-router-dom";
 
 ReactDOM.render(
-    <Main />,
+  <HashRouter>
+    <NavMenu />
+    <div className="content">
+        <Route exact path="/" component={ Home }/>
+        <Route path="/profile" component={ Profile }/>
+        <Route path="/add-post" component={ AddPost }/>
+    </div>
+  </HashRouter>,
   document.getElementById('root')
 );
 

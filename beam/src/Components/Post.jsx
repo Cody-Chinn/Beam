@@ -3,9 +3,18 @@ import '../Styling Sheets/Profile.css'
 import "../Styling Sheets/Post.css";
 import Card from 'react-bootstrap/Card'
 import Badge from 'react-bootstrap/Badge';
+import { db } from '../firebase.js'
 
 
 export default function Post ({post}){
+
+    const deletePost = id => {
+        db.collection("Posts")
+        .doc(post.id)
+        .delete();
+    }
+
+
     return (
         <div className="post-container">
             <Card>
@@ -40,6 +49,11 @@ export default function Post ({post}){
                         </div>
                         
                     </div>   
+                    <img 
+                        onClick={deletePost}
+                        className="post-delete"
+                        src="../delete.png"
+                        alt="delete"/>
                 </Card.Body>
             </Card>
         </div>

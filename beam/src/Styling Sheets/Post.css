@@ -38,3 +38,9 @@
 .post-tag {
     float: right;
 }
+
+.post-delete {
+    float: right;
+    height: 20px;
+    width:20px;
+}

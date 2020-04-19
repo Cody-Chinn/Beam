@@ -30,6 +30,11 @@ class AddPost extends Component {
               <Form.Control type="textarea" rows="1" />
             </Form.Group>
 
+            <Form.Group controlId="formAlbum">
+              <Form.Label>Tags</Form.Label>
+              <Form.Control type="textarea" rows="1" />
+            </Form.Group>
+
             <Button variant="primary" type="submit">
               Submit
             </Button>

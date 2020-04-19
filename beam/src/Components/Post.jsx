@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from "react";
+import '../Styling Sheets/Profile.css'
 import "../Styling Sheets/Post.css";
 import Card from 'react-bootstrap/Card'
-import Tag from './Tag';
+import Badge from 'react-bootstrap/Badge';
 
-export default function Post () {
 
+export default function Post (){
     return (
-        <div className="post-container col-md-6">
+        <div>
             <Card>
                 <Card.Body>
                     <Card.Title>
@@ -16,11 +17,15 @@ export default function Post () {
                         alt="profile"  />
                         Cory Chinn
                     <div className="post-tag">
-                        <Tag />
+                    
+                        <Badge pill variant='dark'>
+                            beats
+                        </Badge>
+                    
                     </div>
                     </Card.Title>
                     <Card.Text>
-                        Check out some of my new music!
+                        Check out my new music!
                     </Card.Text>  
                     <div> 
                         <img 
@@ -28,7 +33,7 @@ export default function Post () {
                             className="post-content-img" 
                             alt="album cover"/>       
                         <div>
-                            Album: mixtape <br />
+                            Album: Mixtap <br />
                             Track: UFO <br />
                             Artist: Cory Chinn <br />
                         </div>
@@ -36,6 +41,6 @@ export default function Post () {
                 </Card.Body>
             </Card>
         </div>
-
-    )
+    );
 }
+

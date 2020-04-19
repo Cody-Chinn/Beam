@@ -1,6 +1,5 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import '../Styling Sheets/Profile.css'
-import Post from './Post';
 import { db } from '../firebase.js'
 import Badge from 'react-bootstrap/Badge';
 
@@ -12,7 +11,7 @@ const Profile = () => {
   useEffect(() => {
     console.log('Using Effect');
 
-    const getProf = db.collection('People').onSnapshot(snapshot => {
+    const unsub = db.collection('People').onSnapshot(snapshot => {
       const userInfo = snapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
@@ -23,7 +22,7 @@ const Profile = () => {
 
     return () => {
       console.log('cleanup');
-      getProf();
+      unsub();
     };
   }, []);
 
@@ -44,14 +43,14 @@ const Profile = () => {
                   </Badge>
                   )}
                   <br />
-                  <h4 className="profile-biography-hdr">Musical Biography: </h4>
-                  <p className="profile-biography">{profile.map(prof => prof.bio)}</p>
               </div>
           ))}
         </div>
-        <Post />
-        <Post />
-        <Post />
+        <br />
+          <div>
+            <h4 className="profile-biography-hdr">Musical Biography: </h4>
+            <p className="profile-biography">{profile.map(prof => prof.bio)}</p>
+          </div>
         </div>
       </div>
     );

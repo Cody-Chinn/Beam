@@ -1,42 +1,44 @@
-import React, { useState } from "react";
+import React from "react";
 import '../Styling Sheets/Profile.css'
 import "../Styling Sheets/Post.css";
 import Card from 'react-bootstrap/Card'
 import Badge from 'react-bootstrap/Badge';
 
 
-export default function Post (){
+export default function Post ({post}){
     return (
-        <div>
+        <div className="post-container">
             <Card>
                 <Card.Body>
                     <Card.Title>
-                    <img 
-                        src="../default_profile.png" 
-                        className="post-pic" 
-                        alt="profile"  />
-                        Cory Chinn
+                        <img 
+                            src="../default_profile.png" 
+                            className="post-pic" 
+                            alt="profile"/>
+                        {post.name}
                     <div className="post-tag">
-                    
-                        <Badge pill variant='dark'>
-                            beats
-                        </Badge>
-                    
+                    {post.tags.map((tag, index) => 
+                        <Badge pill variant='dark' key={index}>
+                            {tag}
+                        </Badge>)}    
                     </div>
                     </Card.Title>
                     <Card.Text>
-                        Check out my new music!
+                        {post.description}
                     </Card.Text>  
                     <div> 
+                        <a href={post.link}>
                         <img 
                             src="../note.jpg"
                             className="post-content-img" 
-                            alt="album cover"/>       
+                            alt="album cover"/>  
+                        </a>     
                         <div>
-                            Album: Mixtap <br />
-                            Track: UFO <br />
-                            Artist: Cory Chinn <br />
+                            Album: {post.album} <br />
+                            Track: {post.track} <br />
+                            Artist: {post.artist} <br />
                         </div>
+                        
                     </div>   
                 </Card.Body>
             </Card>

@@ -1,22 +1,27 @@
-import React, { Component } from "react";
+import React from "react";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button'
 import '../Styling Sheets/AddPost.css'
  
-class AddPost extends Component {
-  render() {
+const AddPost = () => {
+  
     return (
       <div>
         <div className="add-post-container col-md-6">
           <Form>
 
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Label>Post description</Form.Label>
-              <Form.Control as="textarea" rows="3" />
+          <Form.Group controlId="formName">
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="textarea" rows="1" />
             </Form.Group>
 
-            <Form.Group controlId="formTitle">
-              <Form.Label>Title</Form.Label>
+            <Form.Group controlId="formArtist">
+              <Form.Label>Artist</Form.Label>
+              <Form.Control type="textarea" rows="1" />
+            </Form.Group>
+
+            <Form.Group controlId="formTrack">
+              <Form.Label>Track</Form.Label>
               <Form.Control type="textarea" rows="1" />
             </Form.Group>
 
@@ -25,12 +30,17 @@ class AddPost extends Component {
               <Form.Control type="textarea" rows="1" />
             </Form.Group>
 
-            <Form.Group controlId="formAlbum">
-              <Form.Label>Audio</Form.Label>
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Label>Post description</Form.Label>
+              <Form.Control as="textarea" rows="3" />
+            </Form.Group>
+
+            <Form.Group controlId="formLink">
+              <Form.Label>Link</Form.Label>
               <Form.Control type="textarea" rows="1" />
             </Form.Group>
 
-            <Form.Group controlId="formAlbum">
+            <Form.Group controlId="formTags">
               <Form.Label>Tags</Form.Label>
               <Form.Control type="textarea" rows="1" />
             </Form.Group>
@@ -42,7 +52,6 @@ class AddPost extends Component {
         </div>
       </div>
     );
-  }
 }
  
 export default AddPost;

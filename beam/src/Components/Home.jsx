@@ -31,26 +31,3 @@ const Home = () => {
 }
    
   export default Home;
-
-
-  // const Profile = () => {
-
-  //   const [profile, setProfile] = useState([]);
-  
-  //   useEffect(() => {
-  //     console.log('Using Effect');
-  
-  //     const getProf = db.collection('People').onSnapshot(snapshot => {
-  //       const userInfo = snapshot.docs.map(doc => ({
-  //         id: doc.id,
-  //         ...doc.data()
-  //       }));
-  //       setProfile(userInfo);
-  //       console.log(userInfo);
-  //     });
-  
-  //     return () => {
-  //       console.log('cleanup');
-  //       getProf();
-  //     };
-  //   }, []);

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import '../Styling Sheets/Profile.css'
 import { db } from '../firebase.js'
 import Badge from 'react-bootstrap/Badge';
+import Button from 'react-bootstrap/Button';
+import history from "../history.js"
 
  
 const Profile = () => {
@@ -27,7 +29,6 @@ const Profile = () => {
   }, []);
 
 
-
     return (
       <div>
         <div className="profile-container col-md-6">
@@ -51,6 +52,9 @@ const Profile = () => {
             <h4 className="profile-biography-hdr">Musical Biography: </h4>
             <p className="profile-biography">{profile.map(prof => prof.bio)}</p>
           </div>
+            <Button variant="secondary" size="small" onClick={() => history.push('/EditProfile')}>
+                  Edit
+            </Button>
         </div>
       </div>
     );

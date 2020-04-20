@@ -3,24 +3,27 @@ import './Styling Sheets/index.css';
 import Home from './Components/Home';
 import NavMenu from './Components/NavMenu';
 import Profile from './Components/Profile';
-import AddPost from './Components/AddPost'
+import AddPost from './Components/AddPost';
+import EditProfile from './Components/EditProfile'
 import * as serviceWorker from './serviceWorker';
+import history from './history'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import {
   Route,
-  HashRouter
+  Router
 } from "react-router-dom";
 
 ReactDOM.render(
-  <HashRouter>
+  <Router history={history}>
     <NavMenu />
     <div className="content">
         <Route exact path="/" component={ Home }/>
         <Route path="/profile" component={ Profile }/>
         <Route path="/add-post" component={ AddPost }/>
+        <Route path="/edit-profile" component={ EditProfile } />
     </div>
-  </HashRouter>,
+  </Router>,
   document.getElementById('root')
 );
 

@@ -22,6 +22,7 @@ class NavMenu extends Component {
             <Nav className="mr-auto">
             <NavLink className="menu-item" to="/profile">Profile </NavLink>
             <NavLink className="menu-item" to="/add-post">Add Post </NavLink>
+            <NavLink className="menu-item" to="/edit-profile">Edit Profile </NavLink>
         </Nav>
         </Navbar.Collapse>
     </Navbar>

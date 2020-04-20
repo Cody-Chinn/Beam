@@ -52,7 +52,7 @@ const Profile = () => {
             <h4 className="profile-biography-hdr">Musical Biography: </h4>
             <p className="profile-biography">{profile.map(prof => prof.bio)}</p>
           </div>
-            <Button variant="secondary" size="small" onClick={() => history.push('/EditProfile')}>
+            <Button variant="secondary" size="small" onClick={() => history.push('/edit-profile')}>
                   Edit
             </Button>
         </div>

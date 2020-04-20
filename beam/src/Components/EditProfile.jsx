@@ -73,7 +73,7 @@ const EditProfile = () => {
               name='firstName'
               value={prof.firstName}
               onChange={handleChange}
-              className='validate'
+              className='validate edit-profile-input'
               required
             />
           </div>
@@ -90,7 +90,7 @@ const EditProfile = () => {
               name='lastName'
               value={prof.lastName}
               onChange={handleChange}
-              className='validate'
+              className='validate edit-profile-input'
               required
             />
           </div>
@@ -108,7 +108,7 @@ const EditProfile = () => {
               value={prof.title}
               onChange={handleChange}
               placeholder='Singer, Engineer, etc.'
-              className='validate'
+              className='validate edit-profile-input'
               required
             />
           </div>
@@ -126,7 +126,7 @@ const EditProfile = () => {
               value={prof.bio}
               onChange={handleChange}
               placeholder='Hi, nice to meet you'
-              className='validate'
+              className='validate edit-profile-input'
               required
             />
           </div>
@@ -144,7 +144,7 @@ const EditProfile = () => {
               value={prof.tags}
               onChange={handleChange}
               placeholder='beats, country, etc.'
-              className='validate'
+              className='validate edit-profile-input'
               required
             />
           </div>

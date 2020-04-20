@@ -1,3 +1,7 @@
 .add-post-container {
     margin: 10px auto;
 }
+
+.add-post-input {
+    width: 100%
+}

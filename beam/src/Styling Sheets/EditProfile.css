@@ -1,3 +1,7 @@
-.add-post-container {
+.edit-profile-container {
     margin: 10px auto;
+}
+
+.edit-profile-input {
+    width: 100%
 }

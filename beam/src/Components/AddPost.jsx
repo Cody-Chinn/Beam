@@ -51,8 +51,8 @@ const AddPost = () => {
               name='name'
               value={post.name}
               onChange={handleChange}
-              placeholder='first name last name'
-              className='validate'
+              placeholder='first and last name'
+              className='validate add-post-input'
               required
             />
           </div>
@@ -70,7 +70,7 @@ const AddPost = () => {
               value={post.artist}
               onChange={handleChange}
               placeholder='stage name'
-              className='validate'
+              className='validate add-post-input'
               required
             />
           </div>
@@ -88,7 +88,7 @@ const AddPost = () => {
               value={post.track}
               onChange={handleChange}
               placeholder='Bohemian Rhapsody'
-              className='validate'
+              className='validate add-post-input'
               required
             />
           </div>
@@ -106,7 +106,7 @@ const AddPost = () => {
               value={post.album}
               onChange={handleChange}
               placeholder='mixtape'
-              className='validate'
+              className='validate add-post-input'
               required
             />
           </div>
@@ -124,7 +124,7 @@ const AddPost = () => {
               value={post.description}
               onChange={handleChange}
               placeholder='A cool tune to listen to in the car'
-              className='validate'
+              className='validate add-post-input'
               required
             />
           </div>
@@ -142,7 +142,7 @@ const AddPost = () => {
               value={post.link}
               onChange={handleChange}
               placeholder='youtube/spotify links'
-              className='validate'
+              className='validate add-post-input'
               required
             />
           </div>
@@ -161,7 +161,7 @@ const AddPost = () => {
               value={post.tags}
               onChange={handleChange}
               placeholder='beats, country, etc.'
-              className='validate'
+              className='validate add-post-input'
               required
             />
           </div>
